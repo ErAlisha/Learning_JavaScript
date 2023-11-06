@@ -33,6 +33,7 @@ console.log(obj[1]); //so means key and value both can be of any data type
 
 
 
+
 //its running good in console of web page
 //its running good in command prompt
 //its not working in terminal of vs code,,chal pada when instead of writing 
