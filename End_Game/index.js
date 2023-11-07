@@ -1,3 +1,11 @@
+//npm i readline-sync
+//npm install readline-sync
+var readLineSync = require('readline-sync')
+var userName = readLineSync.question("What is your good name ?");
+console.log("Welcome "+userName+" to a quick DO YOU KNOW ME quiz");
+var score=0;
+
+
 var questionOne ={
   question : "What is my age?",
   answer : 21
@@ -50,24 +58,22 @@ var questionTen={
 
 var questions = [questionOne,questionTwo,questionThree,questionFour,questionFive,questionSix,questionSeven,questionEight,questionNine,questionTen];
 
-var readLineSync = require('readline-sync')
-var userName = readLineSync.question("What is your good name ?");
-console.log("Welcome "+userName+" to a quick DO YOU KNOW ME quiz");
-var score=0;
 
 function play(question,answer){
   var userAns = readLineSync.question(question);
   if(userAns === answer){
     console.log("You are right !");
-    score++;
+    score=score+1;
   }
   else{
     console.log("Oops ! You gave wrong answer !");
   }
+  console.log("Your current score is :",score);
+  console.log("---------------");
 }
 
 for(let i=0;i<questions.length;i++){
   var curObj = questions[i];
-  console.log(play(curObj.question,curObj.answer));
+  play(curObj.question,curObj.answer);
 }
 console.log("Your final score is :",score);
