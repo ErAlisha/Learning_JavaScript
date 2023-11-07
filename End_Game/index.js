@@ -18,7 +18,7 @@ var questionTwo ={
 
 var questionThree ={
   question : "What is my ultimate hobby ?" ,
-  answer : "Workout"
+  answer : "Reading"
 }
 
 var questionFour={
@@ -33,12 +33,12 @@ var questionFive={
 
 var questionSix={
   question : "How do I get ultimate peace in life?",
-  answer : "Sewa"
+  answer : "Prayer"
 }
 
 var questionSeven={
   question : "What is my favorite sport?",
-  answer : "bodyBuilding"
+  answer : "badminton"
 }
 
 var questionEight={
@@ -53,7 +53,7 @@ var questionNine={
 
 var questionTen={
   question:"What is my vision in life?",
-  answer: "success"
+  answer: "Software_Engineer"
 }
 
 var questions = [questionOne,questionTwo,questionThree,questionFour,questionFive,questionSix,questionSeven,questionEight,questionNine,questionTen];
