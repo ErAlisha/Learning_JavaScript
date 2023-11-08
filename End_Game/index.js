@@ -1,8 +1,10 @@
-//npm i readline-sync
 //npm install readline-sync
+//npm install chalk
+var chalk = require('chalk');
+
 var readLineSync = require('readline-sync')
 var userName = readLineSync.question("What is your good name ?");
-console.log("Welcome "+userName+" to a quick DO YOU KNOW ME quiz");
+console.log(chalk.green("Welcome "+userName+" to a -> DO YOU KNOW ME quiz"));
 var score=0;
 
 
@@ -60,13 +62,13 @@ var questions = [questionOne,questionTwo,questionThree,questionFour,questionFive
 
 
 function play(question,answer){
-  var userAns = readLineSync.question(question);
-  if(userAns === answer){
-    console.log("You are right !");
+  var userAns = readLineSync.question(chalk.cyan(question));
+  if(userAns === answer.toString()){
+    console.log(chalk.green("You are right !"));
     score=score+1;
   }
   else{
-    console.log("Oops ! You gave wrong answer !");
+    console.log(chalk.red("Oops ! You gave wrong answer !"));
   }
   console.log("Your current score is :",score);
   console.log("---------------");
