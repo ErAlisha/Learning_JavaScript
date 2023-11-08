@@ -10,7 +10,8 @@ import chalk from 'chalk';
 import readLineSync from 'readline-sync'
 
 var userName = readLineSync.question("What is your good name ?");
-console.log(chalk.green("Welcome "+userName+" to a -> DO YOU KNOW ME quiz"));
+console.log(chalk.green.bold.underline("Welcome "+chalk.magenta(userName)+" to a -> DO YOU KNOW ME quiz"));
+console.log('\n');
 var score=0;
 
 
@@ -55,7 +56,7 @@ var questionEight={
 }
 
 var questionNine={
-  question: "What to I do in my free time ?",
+  question: "What do I do in my free time ?",
   answer:"sing"
 }
 
@@ -66,10 +67,9 @@ var questionTen={
 
 var questions = [questionOne,questionTwo,questionThree,questionFour,questionFive,questionSix,questionSeven,questionEight,questionNine,questionTen];
 
-
 function play(question,answer){
   var userAns = readLineSync.question(chalk.cyan(question));
-  if(userAns === answer.toString()){
+  if(userAns.toUpperCase() === (answer.toString()).toUpperCase()){
     console.log(chalk.green("You are right !"));
     score=score+1;
   }
@@ -85,6 +85,40 @@ for(let i=0;i<questions.length;i++){
   play(curObj.question,curObj.answer);
 }
 console.log("Your final score is :",score);
+console.log("---------------------");
+
+//check for high score
+//scores of prior users
+
+var user1Score={
+  name : "Rajni",
+  score: 7
+}
+var user2Score={
+name : "Gori",
+score: 6
+}
+
+var user3Score = {
+  name : "Ansh",
+  score : 5
+}
+
+var scores = [user1Score,user2Score,user3Score];
+
+function highScore(currentUserName,currentScore){
+   for(let i=0;i<scores.length;i++){
+    if(currentScore>scores[i].score){
+      console.log(chalk.magentaBright.bold("Yeah !! Great Job, You have made a new high score !!"));
+      console.log(chalk.magentaBright.bold("Kindly send me a screenshot of your score so that I may update the high score !"));
+      break; //basically ek se bhi high score beat hua to we'll come out from the loop
+    }
+   }
+}
+
+//function call to check if new high score is made or not
+highScore(userName,score);
+
 
 //To play this colourful game, you have to run 
 //node index.mjs in your command prompt or in your terminal
