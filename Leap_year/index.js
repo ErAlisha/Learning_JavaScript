@@ -1,4 +1,6 @@
-//npm install readline-sync ,, //This code needs to be run in terminal to find the readline-sync
+//These needs to be run in terminal to find the readline-sync and chalk
+//npm install readline-sync 
+//npm install chalk@4.1.2 
 
 function isValidFormat(dob){
       var dateRegex = /^\d{2}\/\d{2}\/\d{4}$/;  //this is regular expression to match the input format of our string with it
