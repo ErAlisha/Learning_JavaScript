@@ -1,4 +1,5 @@
 console.log('Namaste Duniya,Radha Soami Ji');
+console.log("Journey to become a Full Stack Developer");
 //learning primitive data types
 // NN SS BB U
 let a = 1;
@@ -21,16 +22,6 @@ const obj={
 console.log(obj["Alisha"]);
 console.log(obj["improvement"]);
 console.log(obj[1]); //so means key and value both can be of any data type
-
-
-
-
-
-
-
-
-
-
 
 
 
